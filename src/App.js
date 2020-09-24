@@ -1,9 +1,12 @@
 import React from 'react';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
+import Dashboard from './components/Products/Dashboard'
 import Usernav from './components/MIscal/Usernav'
 import Adminnav from './components/MIscal/AdminNav'
+import Uploadproduct from './Admin/Uploadproduct'
+import Allproduct from './Admin/Allproduct'
+import Shop from './components/Products/Shop'
 import Productdetails from './components/Products/Productdetails'
-import Dashboard from './components/Products/Dashboard'
 import './App.css'
 import Signup from './components/Users/Signup'
 import Login from './components/Users/Login'
@@ -15,7 +18,6 @@ import Footer from './components/MIscal/Footer'
 import Homeedit from './Admin/Homeedit'
 import Wishfile from './components/Products/Wishfile'
 import Shipment from './components/Products/Shipment'
-import Location from './Admin/Location'
 import Adlog from './components/Users/Adlog'
 function App() {
   return (
@@ -104,8 +106,24 @@ function App() {
 
           </Route>
 
+          <Route exact path='/shop' render={(props)=>(
+            <React.Fragment>
+              <Usernav/>
+              <Shop/>
+              <Footer/>
+            </React.Fragment>
+          )}>
 
+          </Route>
+          <Route exact path='/sr' render={(props)=>(
+            <React.Fragment>
+              <Usernav/>
+              <Shop/>
+              <Footer/>
+            </React.Fragment>
+          )}>
 
+          </Route>
           <Route exact path='/prodet' render={(props)=>(
             <React.Fragment>
               <Usernav/>
@@ -117,27 +135,23 @@ function App() {
           </Route>
           </Switch>
           <Switch>
-          
-          
-          <Route exact path="/adlog" render={(props)=>(
+          <Route exact path='/pdupl' render={(props)=>(
             <React.Fragment>
-            
-              <Adlog/>
-           
+               <Adminnav/>
+              <Uploadproduct/>
             </React.Fragment>
           )}>
 
           </Route>
-          <Route exact path='/pdlocation' render={(props)=>(
+          <Route exact path='/pdallprod' render={(props)=>(
             <React.Fragment>
               <Adminnav/>
-              <Location/>
+              <Allproduct/>
             </React.Fragment>
           )}>
 
           </Route>
          
-          
           <Route exact path='/pdhomedit' render={(props)=>(
             <React.Fragment>
               <Adminnav/>
