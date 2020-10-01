@@ -5,6 +5,8 @@ import Usernav from './components/MIscal/Usernav'
 import Adminnav from './components/MIscal/AdminNav'
 import Uploadproduct from './Admin/Uploadproduct'
 import Allproduct from './Admin/Allproduct'
+import Soldprod from './Admin/Soldprod'
+
 import Shop from './components/Products/Shop'
 import Productdetails from './components/Products/Productdetails'
 import './App.css'
@@ -18,6 +20,7 @@ import Footer from './components/MIscal/Footer'
 import Homeedit from './Admin/Homeedit'
 import Wishfile from './components/Products/Wishfile'
 import Shipment from './components/Products/Shipment'
+
 import Adlog from './components/Users/Adlog'
 function App() {
   return (
@@ -151,7 +154,24 @@ function App() {
           )}>
 
           </Route>
-         
+          <Route exact path='/pdsold' render={(props)=>(
+            <React.Fragment>
+              <Adminnav/>
+              <Soldprod/>
+            </React.Fragment>
+          )}>
+
+          </Route>
+          <Route exact path="/adlog" render={(props)=>(
+            <React.Fragment>
+            
+              <Adlog/>
+           
+            </React.Fragment>
+          )}>
+
+          </Route>
+
           <Route exact path='/pdhomedit' render={(props)=>(
             <React.Fragment>
               <Adminnav/>
