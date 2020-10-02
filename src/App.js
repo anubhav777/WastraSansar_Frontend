@@ -6,7 +6,7 @@ import Adminnav from './components/MIscal/AdminNav'
 import Uploadproduct from './Admin/Uploadproduct'
 import Allproduct from './Admin/Allproduct'
 import Soldprod from './Admin/Soldprod'
-
+import Uploadbrand from './Admin/Uploadbrand'
 import Shop from './components/Products/Shop'
 import Productdetails from './components/Products/Productdetails'
 import './App.css'
@@ -20,7 +20,6 @@ import Footer from './components/MIscal/Footer'
 import Homeedit from './Admin/Homeedit'
 import Wishfile from './components/Products/Wishfile'
 import Shipment from './components/Products/Shipment'
-
 import Adlog from './components/Users/Adlog'
 function App() {
   return (
@@ -171,7 +170,14 @@ function App() {
           )}>
 
           </Route>
+          <Route exact path='/pdbrand' render={(props)=>(
+            <React.Fragment>
+              <Adminnav/>
+              <Uploadbrand/>
+            </React.Fragment>
+          )}>
 
+          </Route>
           <Route exact path='/pdhomedit' render={(props)=>(
             <React.Fragment>
               <Adminnav/>
