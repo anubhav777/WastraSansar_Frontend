@@ -20,6 +20,7 @@ import Footer from './components/MIscal/Footer'
 import Homeedit from './Admin/Homeedit'
 import Wishfile from './components/Products/Wishfile'
 import Shipment from './components/Products/Shipment'
+import Location from './Admin/Location'
 import Adlog from './components/Users/Adlog'
 function App() {
   return (
@@ -166,6 +167,14 @@ function App() {
             
               <Adlog/>
            
+            </React.Fragment>
+          )}>
+
+          </Route>
+          <Route exact path='/pdlocation' render={(props)=>(
+            <React.Fragment>
+              <Adminnav/>
+              <Location/>
             </React.Fragment>
           )}>
 
